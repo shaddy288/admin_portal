@@ -23,7 +23,7 @@ const SocietyComponent = ({ rows, handleClickOpen, onDelete, onEdit }) => {
         sx={{ m: 1, p: 2, background: "#ed6c02", color: "#ffff" }}
         onClick={handleClickOpen}
       >
-        Create Society
+        Create Society test 
       </Button>
       <Table>
         <TableHead sx={{ background: "#367fa9 !important" }}>
