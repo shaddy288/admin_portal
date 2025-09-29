@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "name": "shadab pathan",
+      "type": "income",
+      "id": "800f"
+    },
+    {
+      "id": "e73c",
+      "name": "shadab",
+      "type": "expenditure"
+    },
+    {
+      "name": "Radio city",
+      "type": "expenditure",
+      "id": "5d40"
+    },
+    {
+      "id": "cec8",
+      "name": "shadab",
+      "type": "expenditure"
+    },
+    {
+      "id": "1408",
+      "name": "Saif",
+      "type": "expenditure"
+    }
+  ]
+}
