@@ -1,0 +1,20 @@
+{
+    "rowsData" : [
+    {
+        "id" : 1,
+        "society" : "Kondhwa",
+        "name" : "shadab pathan",
+        "address" : "646 rasta peth",
+        "Date_of_admission" : "27-sep-2016",
+        "Data_of_nomination" : "18-oct-2016"
+    },
+     {
+        "id" : 2,
+        "society" : "Kondhwa scscs",
+        "name" : "shadab pathan sASDasd",
+        "address" : "646 rasta peth sdASD",
+        "Date of admission" : "27-sep-2016",
+        "Data of nomination" : "18-oct-2016"
+    }
+    ]
+}

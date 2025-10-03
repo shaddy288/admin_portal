@@ -33,20 +33,24 @@ function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
 
-const FormMainTable = ({ data }) => {
-  console.log(data);
-
+const FormMainTable = ({ data, open }) => {
   return (
     <TableContainer component={Paper}>
+      <Button
+        sx={{ background: "#367fa9", color: "white", margin: "10px" }}
+        onClick={open}
+      >
+        Open button
+      </Button>
       <Table sx={{ minWidth: 800 }} aria-label="customized table">
         <TableHead sx={{ background: "#367fa9 !important" }}>
           <TableRow>
             <StyledTableCell>Sr no </StyledTableCell>
+            <StyledTableCell align="left">Society Name</StyledTableCell>
             <StyledTableCell align="left">Name</StyledTableCell>
-            <StyledTableCell align="left">Mobile Number</StyledTableCell>
-            <StyledTableCell align="left">Email Id</StyledTableCell>
-            <StyledTableCell align="left">City</StyledTableCell>
-            <StyledTableCell align="left">Status</StyledTableCell>
+            <StyledTableCell align="left">Address</StyledTableCell>
+            <StyledTableCell align="left">Data of Admission</StyledTableCell>
+            <StyledTableCell align="left">Data of nomination</StyledTableCell>
             <StyledTableCell align="left">Action</StyledTableCell>
           </TableRow>
         </TableHead>
@@ -56,17 +60,14 @@ const FormMainTable = ({ data }) => {
               <StyledTableCell component="th" scope="row">
                 {index + 1}
               </StyledTableCell>
+              <StyledTableCell align="left">{data.society}</StyledTableCell>
               <StyledTableCell align="left">{data.name}</StyledTableCell>
-              <StyledTableCell align="left">{data.mobile}</StyledTableCell>
-              <StyledTableCell align="left">{data.email}</StyledTableCell>
-              <StyledTableCell align="left">{data.city}</StyledTableCell>
+              <StyledTableCell align="left">{data.address}</StyledTableCell>
               <StyledTableCell align="left">
-                <Chip
-                  label={data.status}
-                  color={data.status === "Approve" ? "success" : "warning"}
-                  size="small"
-                  sx={{ fontWeight: "bold" }}
-                />
+                {data.Date_of_admission}
+              </StyledTableCell>
+              <StyledTableCell align="left">
+                {data.Data_of_nomination}
               </StyledTableCell>
               <StyledTableCell align="left">
                 <Button

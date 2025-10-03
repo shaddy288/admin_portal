@@ -5,14 +5,23 @@ import FormMainTable from "./FormMainTable";
 
 const Formmain = () => {
   const [data, setData] = useState([]);
+  const [open, setOpen] = useState(false);
 
-  const url = "http://localhost:3000/rows";
+  const url = "http://localhost:3000/rowsData";
 
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <Box
@@ -27,7 +36,11 @@ const Formmain = () => {
       }}
     >
       <FormMainTable data={data} />
-      {/* <FormModal /> */}
+      <FormModal
+        open={open}
+        handleClose={handleClose}
+        handleClickOpen={handleClickOpen}
+      />
     </Box>
   );
 };
